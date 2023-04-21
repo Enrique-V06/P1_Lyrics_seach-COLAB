@@ -36,7 +36,7 @@ async function searchSong(searchValue){
 
 //display final result in DO
 function showData(data){
-  var song = ${song.title}
+//   var song = ${song.title}
     result.innerHTML = `
     <ul class="song-list">
       ${data.data
@@ -53,12 +53,12 @@ function showData(data){
     </ul>
     
   `
-    img = document.querySelector("img"); 
-    img.src = "https://source.unsplash.com/random/1600x900/?"+ {song.title.title};;
+    // const img = document.querySelector("img"); 
+    // img.src = "https://source.unsplash.com/random/1600x900/?"+ {song.title.title};;
 }
 
 // function showImages(){
-//     img = document.querySelector("img"); 
+//     const img = document.querySelector("img"); 
 //     img.src = "https://source.unsplash.com/random/1600x900/?"+ {songTitle,title};
 
 // }
