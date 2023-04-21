@@ -1,3 +1,13 @@
-.container{
-    border-style: dotted;
+#search{
+    font-size: 18px;
+}
+
+.cs-nav{
+    background-color: #ff5275;
+    margin-bottom: 10px;
+}
+
+h1, h2{
+    text-align: center;
+    display: block;
 }

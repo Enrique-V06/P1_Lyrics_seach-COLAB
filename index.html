@@ -6,18 +6,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
-        
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="./assets/style.css"> 
 
     </head>
     <body>
-        <nav class="uk-navbar-container">
+        <nav class=" uk-navbar-container uk-navbar-transparent cs-nav">
             <div class="uk-container">
-                <div uk-navbar>
+                <div>
         
-                    <div class="uk-navbar-left">
-                        <a class="uk-navbar-item uk-logo" href="#" aria-label="Back to Home">Search Lyrics</a>   
+                    <div>
+                        <h1>ENJOY YOUR MUSIC -  SET THE MOOD</h1>   
                     </div>
                 </div>
             </div>
@@ -25,17 +24,18 @@
         <div class="uk-containeruk-grid-divider uk-child-width-expand@s" uk-grid>
             <div class="uk-container uk-container-small">
                 <div class="uk-margin">
-                    <form id="form">
-                        <input type="search" id="search" placeholder="Enter artist name or song title...">
-                        <button class="btn">Search</button>
+                    <form class="uk-search uk-search-default uk-search-large" id="form">
+                        <div  class="uk-flex">
+                            <input class="uk-search-input" type="search" id="search" placeholder="Enter artist name or song title...">
+                            <button class="btn uk-button uk-button-danger">Search</button>
+                        </div>
                     </form>
                 </div>
                 <div>
-                    <section class="result box" id="result">test</section>
+                    <section class="result box" id="result"></section>
                 </div>
             </div>
             <div class="uk-container uk-container-small">
-                --Display Lyrics--
                 <h2>Title - Artist</h2>
                 <pre>
                     With eyes wide shut we lay stagnant awake
@@ -72,18 +72,22 @@
                     Never be found (Ah)
                     Never be found (Ah)
                     Never be found (Ah)
-                    Ah 
+                    Ah testss
                 </pre>
             </div>
             <div class="uk-container uk-container-small">
                 <div>
-                    <img src="https://source.unsplash.com/random/1600x900/?miami">
-                    <img src="https://source.unsplash.com/random/1600x900/?horror">
-                    <img src="https://source.unsplash.com/random/1600x900/?bronze">
+                    <section class="cs-images box" id="images"></section>
+                    <img src="https://source.unsplash.com/random/1600x900/?music">
+                    <img src="https://source.unsplash.com/random/1600x900/?music">
+                    <img src="https://source.unsplash.com/random/1600x900/?music">
                 </div>
                 
             </div>
         </div>
         <script type="text/javascript" src="./assets/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+     
     </body>
 </html>
