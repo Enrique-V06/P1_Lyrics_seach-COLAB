@@ -54,6 +54,10 @@ function showData(data){
   `;
 }
 
+function showImages(){
+    
+}
+
 
 
 
