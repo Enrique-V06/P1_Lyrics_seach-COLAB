@@ -1,40 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Lyric search APP</title>
-        <link rel="stylesheet" href="linkToCSS" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/css/uikit.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.15/dist/js/uikit-icons.min.js"></script>
+        
+
     </head>
     <body>
-        <div class="container">
-        <div class="box">
-            <h1>Search Lyrics</h1>
-            <form id="form">
-                <input type="search" id="search" placeholder="Enter artist name or song title...">
-                <button class="btn">Search</button>
-            </form>
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+                <div uk-navbar>
+        
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo" href="#" aria-label="Back to Home">Search Lyrics</a>   
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="uk-containeruk-grid-divider uk-child-width-expand@s" uk-grid>
+            <div class="uk-container uk-container-small">
+                <div class="uk-margin">
+                    <form id="form">
+                        <input type="search" id="search" placeholder="Enter artist name or song title...">
+                        <button class="btn">Search</button>
+                    </form>
+                </div>
+                <div>
+                    <section class="result box" id="result">test</section>
+                </div>
+            </div>
+            <div class="uk-container uk-container-small">
+                --Display Lyrics--
+                <h2>Title - Artist</h2>
+                <pre>
+                    With eyes wide shut we lay stagnant awake
+                    Safe for now in this wonderous state
+                    Lost at a crossroad that's missing a sign
+                    How do we know if they made it alive
+                    There's something lurking in the distance ahead
+                    Fragments of light shine away from the dead
+                    They fantasize fury, no time left to stop
+                    Its darkness approaching now we're at a loss
+                    Sometimes, when all that's lost remains
+                    Drink from the fountain of youth and never age again
+                    Sometimes we jump across to every cloud
+                    Fly away get lost and never be found
+                    Sometimes, when all that's lost remains
+                    Drink from the fountain of youth and never age again
+                    Sometimes we jump across to every cloud
+                    Fly away get lost and never be found
+                    There's something lurking from the shadows within
+                    Stealing the colour and life from my skin
+                    They fantasize fury at no extra cost
+                    Darkness approaches now we're at a loss
+                    Ah
+                    Ah
+                    Sometimes, when all that's lost remains
+                    Drink from the fountain of youth and never age again
+                    Sometimes we jump across to every cloud
+                    Fly away get lost and never be found
+                    Sometimes, when all that's lost remains
+                    Drink from the fountain of youth and never age again
+                    Sometimes we jump across to every cloud
+                    Fly away get lost and never be found
+                    Never be found,
+                    Never be found (Ah)
+                    Never be found (Ah)
+                    Never be found (Ah)
+                    Ah 
+                </pre>
+            </div>
+            <div class="uk-container uk-container-small">
+                <div>
+                    <img src="https://source.unsplash.com/random/1600x900/?miami">
+                    <img src="https://source.unsplash.com/random/1600x900/?horror">
+                    <img src="https://source.unsplash.com/random/1600x900/?bronze">
+                </div>
+                
+            </div>
         </div>
-        <section class="result box" id="result"></section>
-    </div>
-    
-    <div class="container">
-        <div class="box">
-            <h2>This will be where the search results will be shown.</h2>
-        </div>
-        <section class="result box" id="result"></section>
-    </div>
-
-    <div>
-        <h3>This is where the picture should go.</h3>
-    <img src="placeholder" alt="placeholder">
-    </div>
-    <script type="text/javascript" src="app.js"></script>
-
-
-
-    
+        <script type="text/javascript" src="./assets/script.js"></script>
     </body>
 </html>
