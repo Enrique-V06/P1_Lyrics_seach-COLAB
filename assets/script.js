@@ -8,6 +8,7 @@ const apiURL = 'https://api.lyrics.ovh';
 
 
 /// adding event listener in form
+// comment
 
 form.addEventListener('submit', e=> {
     e.preventDefault();
@@ -33,8 +34,6 @@ async function searchSong(searchValue){
     showData(data)
 }
 
-
-
 //display final result in DO
 function showData(data){
   
@@ -55,7 +54,7 @@ function showData(data){
 }
 
 function showImages(){
-    
+
 }
 
 
