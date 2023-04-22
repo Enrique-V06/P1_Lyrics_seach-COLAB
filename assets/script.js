@@ -53,9 +53,27 @@ function showData(data){
     </ul>
     
   `
+  images.innerHTML = `
+        <ul class="mood-images">
+          ${data.data
+            .map(song=> `<div id ="${song.title} by ${song.artist.name}">
+                        <div>
+                            <img src="https://source.unsplash.com/random/1600x900/?+${song.title}">
+
+                        </div>
+                    </div>`
+            )
+            .join('')}
+        </ul>
+        
+      `
     // const img = document.querySelector("img"); 
     // img.src = "https://source.unsplash.com/random/1600x900/?"+ {song.title.title};;
 }
+function showImages(data){
+    //   var song = ${song.title}
+        
+ }
 
 // function showImages(){
 //     const img = document.querySelector("img"); 
