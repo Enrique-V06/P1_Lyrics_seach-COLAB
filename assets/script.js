@@ -36,26 +36,32 @@ async function searchSong(searchValue){
 
 //display final result in DO
 function showData(data){
-  
+//   var song = ${song.title}
     result.innerHTML = `
     <ul class="song-list">
       ${data.data
-        .map(song=> `<li>
+        .map(song=> `<li id ="${song.title} by ${song.artist.name}">
                     <div>
                         <img src="${song.artist.picture}" alt="Artist image">
                         <strong>${song.artist.name}</strong> - ${song.title} 
                     </div>
-                    <span data-artist="${song.artist.name}" data-songtitle="${song.title}"> get lyrics</span>
+                    <span data-artist="${song.artist.name}" data-songtitle="${song.title}"></span>
                 </li>`
+                
         )
         .join('')}
     </ul>
-  `;
+    
+  `
+    // const img = document.querySelector("img"); 
+    // img.src = "https://source.unsplash.com/random/1600x900/?"+ {song.title.title};;
 }
 
-function showImages(){
+// function showImages(){
+//     const img = document.querySelector("img"); 
+//     img.src = "https://source.unsplash.com/random/1600x900/?"+ {songTitle,title};
 
-}
+// }
 
 
 
