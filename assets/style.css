@@ -11,3 +11,20 @@ h1, h2{
     text-align: center;
     display: block;
 }
+
+.cs-btn-bck{
+
+height: 120px;
+width: 60%;
+}
+
+.cs-button{
+    background-blend-mode: overlay;
+    cursor: pointer;
+}
+
+.cs-button:hover{
+
+    background-color: #ff5275;
+
+}
