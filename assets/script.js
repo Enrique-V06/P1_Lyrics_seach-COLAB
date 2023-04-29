@@ -132,27 +132,21 @@ async function get_lyrics_by_id(id){
 function display_lyrics(data){
     console.log(data.response.song.embed_content);
     var test;
-    var test2;
-    test = data.response.song.embed_content;
-    test2 =test.split("src='");
-    console.log(test2);
-    console.log(test2[0]);
-    console.log(test2[1]);
-    var test3;
-    test3 = test2[1].split("'>");
-    console.log(test3[0]);
-
-    var cslyrics = document.createElement("div");
-    cslyrics.setAttribute("id", "cslyrics");
-    document.body.appendChild(cslyrics);
-    cslyrics.innerHTML = "<div id='rg_embed_link_987750' class='rg_embed_link' data-song-id='987750'>Read <a href='https://genius.com/Belanova-rosa-pastel-lyrics'>“Rosa Pastel” by Belanova</a> on Genius</div>"
-    
-    //data.response.song.embed_content
-    var tag = document.createElement("script");
-    tag.setAttribute("crossorigin","");
-    tag.src = test3[0];
-    cslyrics.appendChild(tag);
-    
+    test = data.response.song.url;
+    test4(test);
 }
 
+function test4(test){
+    // console.log(test);
+    // var newWin = window.open("./index_test.html");
+    // newWin.onload = function(){
+    //     var ident = newWin.document.getElementById("cslyrics");
+    //     ident.innerHTML = `${test}`
+    //   };
+    //   test5(newWin);
 
+    document.location.href = test;
+}
+function test5(newWin){
+    newWin;
+}
