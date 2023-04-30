@@ -1,8 +1,3 @@
-# Project_1_web_development
-
-As a music enthusiast, I want to easily search for a song by title, artist, or even a snippet of lyrics, so that I can quickly find the information and lyrics I need to better understand and enjoy my favorite tracks. Using a music search engine that integrates with the MusiXMatch and Words APIs, I can easily search for a song and get detailed information about it, including album art and related information. Additionally, I can view a related picture that adds context and atmosphere to the music. This will help me broaden my musical horizons, discover new artists and songs, and have a richer music listening experience overall.
-
-
 ![Web Developer](https://img.shields.io/badge/bootcamp-Web%20Developer-red)
 # Module 6 Challenge Weather Dashboard [Web Developer]
 
@@ -23,7 +18,6 @@ Overall, this repo would provide a valuable tool for music lovers and aspiring s
 The following image shows the application first look and functionality. The functionallity.
 
 ![Quiz page demo](./assets/images/deployedpage.gif)
-
 
 
 ## Usage

@@ -5,7 +5,7 @@ const result = document.getElementById('result')
 
 var track ="";
 var access_token = "KqzWE0vkiT2Uzo1upbHHPWUBF-OI3n2FFcvwRgeC17gpj0Ba_mMstaT_8UdY1rbP";
-
+var historyStorage = [];
 /// api URL ///
 const apiURL = 'https://api.lyrics.ovh';
 
@@ -38,8 +38,8 @@ async function searchSong(searchValue){
 
 //display final result in DO
 function showData(data){
-//   var song = ${song.title}
-    result.innerHTML = `
+
+result.innerHTML = `
     <ul class="uk-flex uk-flex-column song-list">
       ${data.data
         .map(song=> `<li onclick = selected_track(this.id) id ="${song.title} ${song.artist.name}">
@@ -75,6 +75,7 @@ function selected_track(id){
     track = encodeURI(id);
     console.log(track);
     get_lyrics(track);
+    createBtn(id);
 }
 result.addEventListener('click', e=>{
     const clickedElement = e.target;
@@ -145,7 +146,8 @@ function test4(test){
     //   };
     //   test5(newWin);
 
-    document.location.href = test;
+    // document.location.href = test;
+    window.open(test);
 }
 function test5(newWin){
     newWin;
@@ -186,3 +188,43 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+function createBtn(track){
+  historyStorage.push(track);
+  localStorage.setItem("historyStorage",JSON.stringify(historyStorage));
+  console.log(historyStorage);
+  createBtn2part(track);
+}
+
+function createBtn2part(track){
+  var trackBtn = document.createElement("button");
+  trackBtn.classList.add("btn","uk-button", "uk-button-danger","cs-btn-srch");
+  trackBtn.setAttribute("id",track);
+  trackBtn.setAttribute("onClick","get_lyrics(this.id)");
+  trackBtn.innerText = track;
+  var img = document.createElement("img");
+  img.classList.add("cs-btn-img");
+  img.setAttribute("src","https://source.unsplash.com/random/100x100/?"+track);
+  document.getElementById("SearchHistory").appendChild(trackBtn);
+  document.getElementById("SearchHistory").appendChild(img);
+
+
+}
+
+function createHitoryBtn(track){
+
+}
+
+function init() {
+  var stored_historyStorage = JSON.parse(localStorage.getItem("historyStorage"));
+  if (stored_historyStorage !== null) {
+    historyStorage = stored_historyStorage;
+
+    console.log("test");
+    for (i = 0; i < historyStorage.length; i++){
+      console.log(historyStorage[i]);
+      createBtn2part(historyStorage[i]);
+    }
+}}
+
+init();

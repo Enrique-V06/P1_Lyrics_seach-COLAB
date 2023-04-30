@@ -11,6 +11,17 @@ h1, h2{
     text-align: center;
     display: block;
 }
+.cs-btn-srch{
+  height: 120px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.cs-btn-img{
+  height: 120px;
+  width: 30%;
+  margin-top: 10px;
+}
 
 .cs-btn-bck{
 
