@@ -4,7 +4,7 @@ const result = document.getElementById('result')
 //const cslyrics = document.getElementById("cslyrics")
 
 var track ="";
-
+var access_token = "KqzWE0vkiT2Uzo1upbHHPWUBF-OI3n2FFcvwRgeC17gpj0Ba_mMstaT_8UdY1rbP";
 
 /// api URL ///
 const apiURL = 'https://api.lyrics.ovh';
@@ -18,7 +18,7 @@ form.addEventListener('submit', e=> {
     searchValue = search.value.trim()
 console.log(searchValue);
     if(!searchValue){
-        alert("There is nothing to search")
+        openModal(modal)
     }
     else{ 
         searchSong(searchValue)
@@ -89,7 +89,7 @@ result.addEventListener('click', e=>{
 })
 
 function get_lyrics(track){
-    var queryURL = "https://api.genius.com/search?q="+track+"&access_token=SEwsuu6UmlRS_iXwgWpm-j6ZTmAB5uuTreJxdMijRiWz41sZfWjaQ-oUR6uZbBJm";
+    var queryURL = "https://api.genius.com/search?q="+track+"&access_token="+access_token;
     console.log(queryURL);
     fetch(queryURL)
         .then(function(response){
@@ -120,7 +120,7 @@ function get_lyrics(track){
 // }
 
 async function get_lyrics_by_id(id){
-    var queryURL = "https://api.genius.com/songs/"+id+"?access_token=SEwsuu6UmlRS_iXwgWpm-j6ZTmAB5uuTreJxdMijRiWz41sZfWjaQ-oUR6uZbBJm";
+    var queryURL = "https://api.genius.com/songs/"+id+"?access_token="+access_token;
 
     const searchResult = await fetch(queryURL)
     console.log(searchResult);
@@ -149,4 +149,40 @@ function test4(test){
 }
 function test5(newWin){
     newWin;
+}
+
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal()
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    closeModal(modal)
+  })
+})
+
+function openModal() {
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }
